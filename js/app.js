@@ -23,7 +23,7 @@ if (answer1 === 'yes' || answer1 === 'y') {
     alert('You are wrong, sorry.');
     console.log('The user got the wrong answer. (no)');
 
-}
+} 
 
 
 // next question 
