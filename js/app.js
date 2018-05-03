@@ -115,38 +115,32 @@ if (answer5 === 'yes' || answer5 === 'y') {
     incorrectAnswers ++;
 }
 
-// var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
-// var questionSix = ('What is one of my favorite brands of cars?'); 
-// var i = 0
+var userInput = false
+var carTries = 6;
 
-// for(var i = 0; i<=cars.length; i++){
-// }
-// while(carAnswer = false){
-//     var answer6 = prompt(questionSix).toLowerCase();
+
+
+while (userInput = true && carTries > 0 ){
+  var questionSix = prompt('What is one of my favorite brands of cars?').toLowerCase();
+    var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
     
+    for(var i = 0; i < cars.length; i++){
+        if (questionSix === cars[i]) {
+            console.log('Q: ' + questionSix +  ' The user got the correct answer. (yes)');
+            userInput = false;
+            carTries = 0;
+            alert("You got it. Im really into cars from europe.")
 
-//     if(cars.indexOf(answer6) > -1){
-//         alert('good job');
-//         carAnswer = true
-//     } else {
-//         alert('Nope, try again.');
-//     }
+        } else if (userInput = true && carTries > 6){
+            console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+            alert('Nope, dont like those.');
 
-// }  
-// var answer6 = prompt(questionSix).toLowerCase();
-
-// for(var i=0; i<cars.length; i++){
-    
-    
-//     if(answer6 === cars[i] ){
-//         alert('Good job!');
-
-
-//     } else {
+        }
         
-        
-//     }
-// }
+    }
+    carTries--;
+}
+
 
 var questionSeven = ('Do I like beer?')
 var answer7 = prompt(questionSeven).toLowerCase();

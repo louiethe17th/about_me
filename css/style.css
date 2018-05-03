@@ -52,6 +52,9 @@ ul {
     background-color: midnightblue;
     color: white;
     border-radius: 25px;
+    list-style-type: disc;
+    margin-left: 500px;
+    margin-right: 500px;
 
 }
 
@@ -66,4 +69,8 @@ ol{
 }
 #faveMovies {
     list-style-type: disc;
+}
+
+li {
+    margin-left: 25px;
 }
