@@ -81,101 +81,116 @@ function secondQuestion() {
 // Asks second question
 secondQuestion();
 
-//Ask the third question
+// Create variables for question 3
 var questionThree = ('Do I like spaghetti?')
 var answer3 = prompt(questionThree).toLowerCase();
 
-
-
-//User guesses yes or no
-if (answer3 === 'yes' || answer3 === 'y') {
-    //right answer
-    alert('Ew, gross, heck no.');
-    console.log('Q: ' + questionThree + ' The user got the wrong answer. (yes)');
-    incorrectAnswers ++;
-} else {
-    //wrong answer
-    alert('DING DING DING! One of the few people on earth.');
-    console.log('Q: ' + questionThree +  ' The user got the correct answer. (no)');
-    correctAnswers ++;
+function thirdQuestion(){
+    //User guesses yes or no
+    if (answer3 === 'yes' || answer3 === 'y') {
+        //right answer
+        alert('Ew, gross, heck no.');
+        console.log('Q: ' + questionThree + ' The user got the wrong answer. (yes)');
+        incorrectAnswers ++;
+    } else {
+        //wrong answer
+        alert('DING DING DING! One of the few people on earth.');
+        console.log('Q: ' + questionThree +  ' The user got the correct answer. (no)');
+        correctAnswers ++;
+    }
 }
 
-//ask the fourth question
+// Asks third question
+thirdQuestion();
+
+// Create variables for fourth question
 var questionFour = ('Can I ride a unicycle?');
 var answer4 = prompt(questionFour).toLowerCase();
 
-if (answer4 === 'yes' || answer4 === 'y') {
-    //right answer
-    alert('Heck yes I can. All the cool kids are doin it, trust me.');
-    console.log('Q: ' + questionFour +  ' The user got the correct answer. (yes)');
-    correctAnswers ++;
-} else {
-    //wrong answer
-    alert('wrong. Do I look like a pleb to you, ' + userName + '?');
-    console.log('Q: ' + questionFour + ' The user got the wrong answer. (no)');
-    incorrectAnswers ++;
+function fourthQuestion(){
+    if (answer4 === 'yes' || answer4 === 'y') {
+        //right answer
+        alert('Heck yes I can. All the cool kids are doin it, trust me.');
+        console.log('Q: ' + questionFour +  ' The user got the correct answer. (yes)');
+        correctAnswers ++;
+    } else {
+        //wrong answer
+        alert('wrong. Do I look like a pleb to you, ' + userName + '?');
+        console.log('Q: ' + questionFour + ' The user got the wrong answer. (no)');
+        incorrectAnswers ++;
+    }
 }
 
-//Ask the 5th question
+// Asks fourth question
+fourthQuestion();
+
+// Creating variables for fifth question
 var questionFive = ('Am I an Absinthe connoisseur?')
 var answer5 = prompt(questionFive).toLowerCase();
 
-if (answer5 === 'yes' || answer5 === 'y') {
-    //right answer
-    alert('Yup, Im fancy AF.');
-    console.log('Q: ' + questionFive +  ' The user got the correct answer. (yes)');
-    correctAnswers ++;
-} else {
-    //wrong answer
-    alert('sorry, wrongggggggg');
-    console.log('Q: ' + questionFive + ' The user got the wrong answer. (no)');
-    incorrectAnswers ++;
+function fifthQuestion(){
+    if (answer5 === 'yes' || answer5 === 'y') {
+        //right answer
+        alert('Yup, Im fancy AF.');
+        console.log('Q: ' + questionFive +  ' The user got the correct answer. (yes)');
+        correctAnswers ++;
+    } else {
+        //wrong answer
+        alert('sorry, wrongggggggg');
+        console.log('Q: ' + questionFive + ' The user got the wrong answer. (no)');
+        incorrectAnswers ++;
+    }
 }
+
+fifthQuestion();
 
 var userInput = false
 var carTries = 6;
 
-
-
-while (userInput = true && carTries > 0 ){
-  var questionSix = prompt('What is one of my favorite brands of cars?').toLowerCase();
-    var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
-    
-    for(var i = 0; i < cars.length; i++){
-        if (questionSix === cars[i]) {
-            console.log('Q: ' + questionSix +  ' The user got the correct answer. (yes)');
-            userInput = false;
-            carTries = 0;
-            alert("You got it. Im really into cars from europe.")
-
-        } else if (userInput = true && carTries > 6){
-            console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
-            alert('Nope, dont like those.');
-
-        }
+function sixthQuestion(){
+    while (userInput = true && carTries > 0 ){
+      var questionSix = prompt('What is one of my favorite brands of cars?').toLowerCase();
+        var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
         
+        for(var i = 0; i < cars.length; i++){
+            if (questionSix === cars[i]) {
+                console.log('Q: ' + questionSix +  ' The user got the correct answer. (yes)');
+                userInput = false;
+                carTries = 0;
+                alert('You got it. Im really into cars from europe.')
+    
+                
+            } else if (userInput = true && carTries > 6){
+                console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+                alert('Nope, dont like those.');
+    
+            }
+            
+        }
+        carTries--;
     }
-    carTries--;
 }
 
+sixthQuestion();
 
 var questionSeven = ('Do I like beer?')
 var answer7 = prompt(questionSeven).toLowerCase();
 
-if (answer7 === 'yes' || answer5 === 'y') {
-    //right answer
-    alert('Yup, Im fancy AF.');
-    console.log('Q: ' + questionSeven +  ' The user got the correct answer. (yes)');
-    correctAnswers ++;
-} else {
-    //wrong answer
-    alert('sorry, wrongggggggg');
-    console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
-    incorrectAnswers ++;
+function seventhQuestion(){
+    if (answer7 === 'yes' || answer5 === 'y') {
+        //right answer
+        alert('Yup, Im fancy AF.');
+        console.log('Q: ' + questionSeven +  ' The user got the correct answer. (yes)');
+        correctAnswers ++;
+    } else {
+        //wrong answer
+        alert('sorry, wrongggggggg');
+        console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+        incorrectAnswers ++;
+    }
 }
 
-
-
+seventhQuestion();
 
 alert(' Did you have fun answering questuons about me? I hope so! You got ' + correctAnswers + ' right and ' + incorrectAnswers + ' wrong!');
 
