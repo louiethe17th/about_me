@@ -1,8 +1,33 @@
 * {
-    color: white;
+    
     text-align: center;
     
+} 
+
+#navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
 }
+
+.navButtons {
+
+}
+
+li a {
+    display: block;
+    color:black;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #808080;
+}
+
 
 
 #profile {
@@ -18,4 +43,27 @@ body {
     background-image: url("../img/space.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+.answers {
+    text-align: center;
+    color: white;
+}
+ul {
+    background-color: midnightblue;
+    color: white;
+    border-radius: 25px;
+
+}
+
+p {
+    color: white;
+    background-color: indigo;
+}
+
+ol{
+    color: white;
+    background-color: midnightblue;
+}
+#faveMovies {
+    list-style-type: disc;
 }

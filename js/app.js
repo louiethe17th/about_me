@@ -2,6 +2,8 @@
 
 // Ask for the users name
 var userName = prompt("What is your name?");
+var correctAnswers = 0;
+var incorrectAnswers = 0;
 
 // Greet the user by name in an alert
 alert('Hello, ' + userName + ', its nice to meet you.');
@@ -10,71 +12,159 @@ alert('Hello, ' + userName + ', its nice to meet you.');
 console.log('The user said their name is ' + userName);
 
 // Ask the first guessing game question 
-var answer1 = prompt('Do you think I have any siblings?').toLowerCase();
+var questionOne = ('Do you think I have any siblings?')
+var answer1 = prompt(questionOne).toLowerCase();
 
 // User guesses "yes/no" or "Y/N"
 // tell user if they are wrong or right
 if (answer1 === 'yes' || answer1 === 'y') {
     //right answer
     alert('You got it right! ' + userName);
-    console.log('The user got the correct answer. (yes)');
+    console.log('Q: ' + questionOne +  ' The user got the correct answer. (yes)');
+    correctAnswers ++;
 } else {
     //wrong answer
     alert('You are wrong, sorry.');
-    console.log('The user got the wrong answer. (no)');
-
+    console.log('Q: ' + questionOne + ' The user got the wrong answer. (no)');
+    incorrectAnswers ++;
 } 
 //Ask the second question
-var answer2 = prompt('Do you think I like beer?').toLowerCase();
+var attempts = 1;
+var chances = 4;
+var questionTwo = ('How many siblings do you think I have? You have 4 chances');
 
-//user guesses yes or no
-if (answer2 === 'yes' || answer2 === 'y') {
-    //right answer
-    alert('Well obviously...');
-    console.log('The user got the correct answer. (yes)');
-} else {
-    //wrong answer
-    alert('What kind of person do you think I am?! You are wrong');
-    console.log('The user got the wrong answer. (no)');
+
+while( answer2 !== '7' && chances > 0 ) {
+    var answer2 = prompt(questionTwo).toLowerCase();
+    // var attempts = 1;
+
+    //user guesses yes or no
+    if (chances <= 0 ) {
+        alert('Sorry, youre out of chances. the Answer was 7.');
+    }
+    if (answer2 === '7' ) {
+        //right answer
+        //attempts ++;
+        alert('Yup! I am one of 8, ' + userName + '. And it only took you ' + attempts + ' guess!');
+        console.log('Q: ' + questionTwo +  ' The user got the correct answer. (7)');
+        correctAnswers ++;
+    } else if (answer2 < 7 ) {
+        //wrong answer
+        chances --;
+        alert('Nope. its more than that. You have ' + chances + ' chances left.');
+        console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
+        attempts ++;
+        incorrectAnswers ++;
+    } else  if(answer2 > 7) {
+        chances --;
+        alert('Nope, less than that. You have ' + chances + ' chances left.');
+        console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
+        attempts ++;
+        incorrectAnswers ++;
+    }  //if (chances <= 0 ) {
+       // alert('Sorry, youre out of chances. the Answer was 7.');
+    //}
+        
 }
-
 //Ask the third question
-var answer3 = prompt('Do I like spaghetti?').toLowerCase();
+var questionThree = ('Do I like spaghetti?')
+var answer3 = prompt(questionThree).toLowerCase();
 
 //User guesses yes or no
 if (answer3 === 'yes' || answer3 === 'y') {
     //right answer
     alert('Ew, gross, heck no.');
-    console.log('The user got the wrong answer. (yes)');
+    console.log('Q: ' + questionThree + ' The user got the wrong answer. (yes)');
+    incorrectAnswers ++;
 } else {
     //wrong answer
     alert('DING DING DING! One of the few people on earth.');
-    console.log('The user got the correct answer. (no)');
+    console.log('Q: ' + questionThree +  ' The user got the correct answer. (no)');
+    correctAnswers ++;
 }
 
 //ask the fourth question
-var answer4 = prompt('Can I ride a unicycle?').toLowerCase();
+var questionFour = ('Can I ride a unicycle?');
+var answer4 = prompt(questionFour).toLowerCase();
 
 if (answer4 === 'yes' || answer4 === 'y') {
     //right answer
     alert('Heck yes I can. All the cool kids are doin it, trust me.');
-    console.log('The user got the correct answer. (yes)');
+    console.log('Q: ' + questionFour +  ' The user got the correct answer. (yes)');
+    correctAnswers ++;
 } else {
     //wrong answer
     alert('wrong. Do I look like a pleb to you, ' + userName + '?');
-    console.log('The user got the wrong answer. (no)');
+    console.log('Q: ' + questionFour + ' The user got the wrong answer. (no)');
+    incorrectAnswers ++;
 }
 
 //Ask the 5th question
-var answer5 = prompt('Am I an Absinthe connoisseur?').toLowerCase();
+var questionFive = ('Am I an Absinthe connoisseur?')
+var answer5 = prompt(questionFive).toLowerCase();
 
 if (answer5 === 'yes' || answer5 === 'y') {
     //right answer
     alert('Yup, Im fancy AF.');
-    console.log('The user got the correct answer. (yes)');
+    console.log('Q: ' + questionFive +  ' The user got the correct answer. (yes)');
+    correctAnswers ++;
 } else {
     //wrong answer
     alert('sorry, wrongggggggg');
-    console.log('The user got the wrong answer. (no)');
+    console.log('Q: ' + questionFive + ' The user got the wrong answer. (no)');
+    incorrectAnswers ++;
 }
+
+// var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
+// var questionSix = ('What is one of my favorite brands of cars?'); 
+// var i = 0
+
+// for(var i = 0; i<=cars.length; i++){
+// }
+// while(carAnswer = false){
+//     var answer6 = prompt(questionSix).toLowerCase();
+    
+
+//     if(cars.indexOf(answer6) > -1){
+//         alert('good job');
+//         carAnswer = true
+//     } else {
+//         alert('Nope, try again.');
+//     }
+
+// }  
+// var answer6 = prompt(questionSix).toLowerCase();
+
+// for(var i=0; i<cars.length; i++){
+    
+    
+//     if(answer6 === cars[i] ){
+//         alert('Good job!');
+
+
+//     } else {
+        
+        
+//     }
+// }
+
+var questionSeven = ('Do I like beer?')
+var answer7 = prompt(questionSeven).toLowerCase();
+
+if (answer7 === 'yes' || answer5 === 'y') {
+    //right answer
+    alert('Yup, Im fancy AF.');
+    console.log('Q: ' + questionSeven +  ' The user got the correct answer. (yes)');
+    correctAnswers ++;
+} else {
+    //wrong answer
+    alert('sorry, wrongggggggg');
+    console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+    incorrectAnswers ++;
+}
+
+
+
+
+alert(' Did you have fun answering questuons about me? I hope so! You got ' + correctAnswers + ' right and ' + incorrectAnswers + ' wrong!');
 
