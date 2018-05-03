@@ -17,17 +17,25 @@ var answer1 = prompt(questionOne).toLowerCase();
 
 // User guesses "yes/no" or "Y/N"
 // tell user if they are wrong or right
-if (answer1 === 'yes' || answer1 === 'y') {
-    //right answer
-    alert('You got it right! ' + userName);
-    console.log('Q: ' + questionOne +  ' The user got the correct answer. (yes)');
-    correctAnswers ++;
-} else {
-    //wrong answer
-    alert('You are wrong, sorry.');
-    console.log('Q: ' + questionOne + ' The user got the wrong answer. (no)');
-    incorrectAnswers ++;
-} 
+
+// Function for first question in guessing game
+function firstQuestion() {
+    if (answer1 === 'yes' || answer1 === 'y') {
+        //right answer
+        alert('You got it right! ' + userName);
+        console.log('Q: ' + questionOne +  ' The user got the correct answer. (yes)');
+        correctAnswers ++;
+    } else {
+        //wrong answer
+        alert('You are wrong, sorry.');
+        console.log('Q: ' + questionOne + ' The user got the wrong answer. (no)');
+        incorrectAnswers ++;
+    } 
+}
+
+// Asks first question
+firstQuestion();
+
 //Ask the second question
 var attempts = 1;
 var chances = 4;
