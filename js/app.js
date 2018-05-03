@@ -11,7 +11,7 @@ alert('Hello, ' + userName + ', its nice to meet you.');
 // Log that to the console
 console.log('The user said their name is ' + userName);
 
-// Ask the first guessing game question 
+// Creating variables for first question
 var questionOne = ('Do you think I have any siblings?')
 var answer1 = prompt(questionOne).toLowerCase();
 
@@ -36,47 +36,56 @@ function firstQuestion() {
 // Asks first question
 firstQuestion();
 
-//Ask the second question
+// Creating variables for second question
 var attempts = 1;
 var chances = 4;
 var questionTwo = ('How many siblings do you think I have? You have 4 chances');
 
+// Create function for second question
+function secondQuestion() {
 
-while( answer2 !== '7' && chances > 0 ) {
-    var answer2 = prompt(questionTwo).toLowerCase();
-    // var attempts = 1;
-
-    //user guesses yes or no
-    if (chances <= 0 ) {
-        alert('Sorry, youre out of chances. the Answer was 7.');
+    while( answer2 !== '7' && chances > 0 ) {
+        var answer2 = prompt(questionTwo).toLowerCase();
+        // var attempts = 1;
+    
+        //user guesses yes or no
+        if (chances <= 0 ) {
+            alert('Sorry, youre out of chances. the Answer was 7.');
+        }
+        if (answer2 === '7' ) {
+            //right answer
+            //attempts ++;
+            alert('Yup! I am one of 8, ' + userName + '. And it only took you ' + attempts + ' guess!');
+            console.log('Q: ' + questionTwo +  ' The user got the correct answer. (7)');
+            correctAnswers ++;
+        } else if (answer2 < 7 ) {
+            //wrong answer
+            chances --;
+            alert('Nope. its more than that. You have ' + chances + ' chances left.');
+            console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
+            attempts ++;
+            incorrectAnswers ++;
+        } else  if(answer2 > 7) {
+            chances --;
+            alert('Nope, less than that. You have ' + chances + ' chances left.');
+            console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
+            attempts ++;
+            incorrectAnswers ++;
+        }  //if (chances <= 0 ) {
+           // alert('Sorry, youre out of chances. the Answer was 7.');
+        //}
+            
     }
-    if (answer2 === '7' ) {
-        //right answer
-        //attempts ++;
-        alert('Yup! I am one of 8, ' + userName + '. And it only took you ' + attempts + ' guess!');
-        console.log('Q: ' + questionTwo +  ' The user got the correct answer. (7)');
-        correctAnswers ++;
-    } else if (answer2 < 7 ) {
-        //wrong answer
-        chances --;
-        alert('Nope. its more than that. You have ' + chances + ' chances left.');
-        console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
-        attempts ++;
-        incorrectAnswers ++;
-    } else  if(answer2 > 7) {
-        chances --;
-        alert('Nope, less than that. You have ' + chances + ' chances left.');
-        console.log('Q: ' + questionTwo + ' The user got the wrong answer. ' + answer2);
-        attempts ++;
-        incorrectAnswers ++;
-    }  //if (chances <= 0 ) {
-       // alert('Sorry, youre out of chances. the Answer was 7.');
-    //}
-        
 }
+
+// Asks second question
+secondQuestion();
+
 //Ask the third question
 var questionThree = ('Do I like spaghetti?')
 var answer3 = prompt(questionThree).toLowerCase();
+
+
 
 //User guesses yes or no
 if (answer3 === 'yes' || answer3 === 'y') {
