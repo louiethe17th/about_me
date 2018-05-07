@@ -15,8 +15,6 @@ console.log('The user said their name is ' + userName);
 var questionOne = ('Do you think I have any siblings?')
 var answer1 = prompt(questionOne).toLowerCase();
 
-// User guesses "yes/no" or "Y/N"
-// tell user if they are wrong or right
 
 // Function for first question in guessing game
 function firstQuestion() {
@@ -33,8 +31,6 @@ function firstQuestion() {
     } 
 }
 
-// Asks first question
-firstQuestion();
 
 // Creating variables for second question
 var attempts = 1;
@@ -43,11 +39,11 @@ var questionTwo = ('How many siblings do you think I have? You have 4 chances');
 
 // Create function for second question
 function secondQuestion() {
-
+    
     while( answer2 !== '7' && chances > 0 ) {
         var answer2 = prompt(questionTwo).toLowerCase();
         // var attempts = 1;
-    
+        
         //user guesses yes or no
         if (chances <= 0 ) {
             alert('Sorry, youre out of chances. the Answer was 7.');
@@ -72,125 +68,137 @@ function secondQuestion() {
             attempts ++;
             incorrectAnswers ++;
         }  //if (chances <= 0 ) {
-           // alert('Sorry, youre out of chances. the Answer was 7.');
-        //}
-            
-    }
-}
-
-// Asks second question
-secondQuestion();
-
-// Create variables for question 3
-var questionThree = ('Do I like spaghetti?')
-var answer3 = prompt(questionThree).toLowerCase();
-
-function thirdQuestion(){
-    //User guesses yes or no
-    if (answer3 === 'yes' || answer3 === 'y') {
-        //right answer
-        alert('Ew, gross, heck no.');
-        console.log('Q: ' + questionThree + ' The user got the wrong answer. (yes)');
-        incorrectAnswers ++;
-    } else {
-        //wrong answer
-        alert('DING DING DING! One of the few people on earth.');
-        console.log('Q: ' + questionThree +  ' The user got the correct answer. (no)');
-        correctAnswers ++;
-    }
-}
-
-// Asks third question
-thirdQuestion();
-
-// Create variables for fourth question
-var questionFour = ('Can I ride a unicycle?');
-var answer4 = prompt(questionFour).toLowerCase();
-
-function fourthQuestion(){
-    if (answer4 === 'yes' || answer4 === 'y') {
-        //right answer
-        alert('Heck yes I can. All the cool kids are doin it, trust me.');
-        console.log('Q: ' + questionFour +  ' The user got the correct answer. (yes)');
-        correctAnswers ++;
-    } else {
-        //wrong answer
-        alert('wrong. Do I look like a pleb to you, ' + userName + '?');
-        console.log('Q: ' + questionFour + ' The user got the wrong answer. (no)');
-        incorrectAnswers ++;
-    }
-}
-
-// Asks fourth question
-fourthQuestion();
-
-// Creating variables for fifth question
-var questionFive = ('Am I an Absinthe connoisseur?')
-var answer5 = prompt(questionFive).toLowerCase();
-
-function fifthQuestion(){
-    if (answer5 === 'yes' || answer5 === 'y') {
-        //right answer
-        alert('Yup, Im fancy AF.');
-        console.log('Q: ' + questionFive +  ' The user got the correct answer. (yes)');
-        correctAnswers ++;
-    } else {
-        //wrong answer
-        alert('sorry, wrongggggggg');
-        console.log('Q: ' + questionFive + ' The user got the wrong answer. (no)');
-        incorrectAnswers ++;
-    }
-}
-
-fifthQuestion();
-
-var userInput = false
-var carTries = 6;
-
-function sixthQuestion(){
-    while (userInput = true && carTries > 0 ){
-      var questionSix = prompt('What is one of my favorite brands of cars?').toLowerCase();
-        var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
-        
-        for(var i = 0; i < cars.length; i++){
-            if (questionSix === cars[i]) {
-                console.log('Q: ' + questionSix +  ' The user got the correct answer. (yes)');
-                userInput = false;
-                carTries = 0;
-                alert('You got it. Im really into cars from europe.')
-    
-                
-            } else if (userInput = true && carTries > 6){
-                console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
-                alert('Nope, dont like those.');
-    
-            }
+            // alert('Sorry, youre out of chances. the Answer was 7.');
+            //}
             
         }
-        carTries--;
     }
-}
-
-sixthQuestion();
-
-var questionSeven = ('Do I like beer?')
-var answer7 = prompt(questionSeven).toLowerCase();
-
-function seventhQuestion(){
-    if (answer7 === 'yes' || answer5 === 'y') {
-        //right answer
-        alert('Yup, Im fancy AF.');
-        console.log('Q: ' + questionSeven +  ' The user got the correct answer. (yes)');
-        correctAnswers ++;
-    } else {
-        //wrong answer
-        alert('sorry, wrongggggggg');
-        console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
-        incorrectAnswers ++;
+    
+    
+    // Create variables for question 3
+    var questionThree = ('Do I like spaghetti?')
+    var answer3 = prompt(questionThree).toLowerCase();
+    
+    // Create function for third question
+    function thirdQuestion(){
+        //User guesses yes or no
+        if (answer3 === 'yes' || answer3 === 'y') {
+            //right answer
+            alert('Ew, gross, heck no.');
+            console.log('Q: ' + questionThree + ' The user got the wrong answer. (yes)');
+            incorrectAnswers ++;
+        } else {
+            //wrong answer
+            alert('DING DING DING! One of the few people on earth.');
+            console.log('Q: ' + questionThree +  ' The user got the correct answer. (no)');
+            correctAnswers ++;
+        }
     }
-}
-
-seventhQuestion();
-
-alert(' Did you have fun answering questuons about me? I hope so! You got ' + correctAnswers + ' right and ' + incorrectAnswers + ' wrong!');
+    
+    
+    // Create variables for fourth question
+    var questionFour = ('Can I ride a unicycle?');
+    var answer4 = prompt(questionFour).toLowerCase();
+    
+    // Create function for fourth question
+    function fourthQuestion(){
+        if (answer4 === 'yes' || answer4 === 'y') {
+            //right answer
+            alert('Heck yes I can. All the cool kids are doin it, trust me.');
+            console.log('Q: ' + questionFour +  ' The user got the correct answer. (yes)');
+            correctAnswers ++;
+        } else {
+            //wrong answer
+            alert('wrong. Do I look like a pleb to you, ' + userName + '?');
+            console.log('Q: ' + questionFour + ' The user got the wrong answer. (no)');
+            incorrectAnswers ++;
+        }
+    }
+    
+    
+    // Creating variables for fifth question
+    var questionFive = ('Am I an Absinthe connoisseur?')
+    var answer5 = prompt(questionFive).toLowerCase();
+    
+    // Create function for fifth question
+    function fifthQuestion(){
+        if (answer5 === 'yes' || answer5 === 'y') {
+            //right answer
+            alert('Yup, Im fancy AF.');
+            console.log('Q: ' + questionFive +  ' The user got the correct answer. (yes)');
+            correctAnswers ++;
+        } else {
+            //wrong answer
+            alert('sorry, wrongggggggg');
+            console.log('Q: ' + questionFive + ' The user got the wrong answer. (no)');
+            incorrectAnswers ++;
+        }
+    }
+    
+    // Create variables for sixth question
+    var userInput = false
+    var carTries = 6;
+    
+    // Create function for sixth family
+    function sixthQuestion(){
+        while (userInput = true && carTries > 0 ){
+            var questionSix = prompt('What is one of my favorite brands of cars?').toLowerCase();
+            var cars = ['volkswagen', 'land rover', 'volvo', 'jaguar', 'porsche' ];
+            
+            for(var i = 0; i < cars.length; i++){
+                if (questionSix === cars[i]) {
+                    console.log('Q: ' + questionSix +  ' The user got the correct answer. (yes)');
+                    userInput = false;
+                    carTries = 0;
+                    alert('You got it. Im really into cars from europe.')
+                    
+                    
+                } else if (userInput = true && carTries > 6){
+                    console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+                    alert('Nope, dont like those.');
+                    
+                }
+                
+            }
+            carTries--;
+        }
+    }
+    
+    // Create variables for seventh question
+    var questionSeven = ('Do I like beer?')
+    var answer7 = prompt(questionSeven).toLowerCase();
+    
+    // Create function for seventh question
+    function seventhQuestion(){
+        if (answer7 === 'yes' || answer5 === 'y') {
+            //right answer
+            alert('Yup, Im fancy AF.');
+            console.log('Q: ' + questionSeven +  ' The user got the correct answer. (yes)');
+            correctAnswers ++;
+        } else {
+            //wrong answer
+            alert('sorry, wrongggggggg');
+            console.log('Q: ' + questionSeven + ' The user got the wrong answer. (no)');
+            incorrectAnswers ++;
+        }
+    }
+    
+    
+    
+    // Asks first question
+    firstQuestion();
+    // Asks second question
+    secondQuestion();
+    // Asks third question
+    thirdQuestion();
+    // Asks fourth question
+    fourthQuestion();
+    // Asks fifth question
+    fifthQuestion();
+    // Asks sixth question
+    sixthQuestion();
+    // Asks seventh question
+    seventhQuestion();
+    
+    alert(' Did you have fun answering questuons about me? I hope so! You got ' + correctAnswers + ' right and ' + incorrectAnswers + ' wrong!');
 
